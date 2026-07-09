@@ -1,0 +1,563 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  scrollbar-width:none;
+}
+.top {
+  height: 10vh;
+  width: 100vw;
+  background-color: black;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 90;
+}
+#icon {
+  height: 85%;
+  width: 20%;
+  background-image: url("Movie box.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.search i {
+  position: relative;
+  left: 30px;
+  font-size:0.6em;
+}
+.search {
+  height: 70%;
+  width: 85%;
+  display: flex;
+  align-items: center;
+}
+input[type=search] {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+button {
+  height: 20px;
+  background-color: transparent;
+  color: #00ff00;
+  position: relative;
+  right: 55px;
+  border: none;
+  outline: none;
+}
+.icons {
+  height: 70%;
+  width: 100%;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.list-scroll {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2em;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+span {
+  scroll-snap-align: center;
+}
+.bottom {
+  height: 7vh;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  background-color:rgba(90,90,90,0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  z-index: 80;
+}
+.home,.Premium,.downloads,.Me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.hero-section {
+  height: 35vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: X mandatory;
+}
+.film-box {
+  height: 100%;
+  min-width: 100vw;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  scroll-padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.film-box:last-child {
+  scroll-snap-align: end;
+}
+.picture {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#picture1 {
+  background-image: url("Film1.webp");
+  background-size: cover;
+  background-position: center;
+}
+#picture2 {
+  background-image: url("Film2.webp");
+  background-size: cover;
+  background-position: center;
+}
+#picture3 {
+  background-image: url("Film3.webp");
+  background-size: cover;
+  background-position: center;
+}
+#picture4 {
+  background-image: url("Film4.webp");
+  background-size: cover;
+  background-position: center;
+}
+#picture5 {
+  background-image: url("Film5.webp");
+  background-size: cover;
+  background-position: center;
+}
+#picture6 {
+  background-image: url("Film6.webp");
+  background-size: cover;
+  background-position: center;
+}
+#picture7 {
+  background-image: url("Film7.webp");
+  background-size: cover;
+  background-position: center;
+}
+.description {
+  height: 25%;
+  width: 60%;
+  background-color: #666;
+  color: white;
+  padding: 8px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  z-index: 80;
+  margin:6px;
+  position: absolute;
+  bottom: 0;
+  scroll-snap-type: x mandatory;
+}
+#span1,#span2,#span3,#span4,#span5,#span6,#span7 {
+  height: 55px;
+  width: 20%;
+scroll-snap-align: start;
+}
+#span1 {
+  background-image: url("Film1.webp");
+  background-size:cover;
+}
+#span2 {
+  background-image: url("Film2.webp");
+  background-size:cover;
+}
+#span3 {
+  background-image: url("Film3.webp");
+  background-size:cover;
+}
+#span4 {
+  background-image: url("Film4.webp");
+  background-size:cover;
+}
+#span5 {
+  background-image: url("Film5.webp");
+  background-size:cover;
+}
+#span6 {
+  background-image: url("Film6.webp");
+  background-size:cover;
+}
+#span7 {
+  background-image: url("Film7.webp");
+  background-size:cover;
+}
+.fa-circle-play {
+  position: relative;
+  left: 12px;
+  font-size: 20px;
+}
+.categories {
+  height: 7.8vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+.box-category {
+  height: 100%;
+  width: 35%;
+  background-color: #666;
+  color: white;
+  flex-shrink: 0;
+  border-radius: 6px;
+} 
+#category {
+  color: white;
+  margin: 1em;
+}
+ #box1 {
+  background-image: url("All.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-left: 0.8em;
+}
+ #box2 {
+  background-image: url("Punjabi.webp");
+  background-size: cover;
+  background-position: center;
+}
+ #box3 {
+  background-image: url("Hollywood.webp");
+  background-size: cover;
+  background-position: center;
+}
+ #box4 {
+  background-image: url("Bollywood.webp");
+  background-size: cover;
+  background-position: center;
+}
+ #box5 {
+  background-image: url("Pakistani.webp");
+  background-size: cover;
+  background-position: center;
+}
+ #box6 {
+  background-image: url("Indian Drama.webp");
+  background-size: cover;
+  background-position: center;
+}
+ #box7 {
+  background-image: url("Turkish Drama.webp");
+  background-size: cover;
+  background-position: center;
+}
+ #box8 {
+  background-image: url("Western TV.webp");
+  background-size: cover;
+  background-position: center;
+}
+ #box9 {
+  background-image: url("K-drama.webp");
+  background-size: cover;
+  background-position: center;
+}
+ #box10 {
+  background-image: url("Anime.webp");
+  background-size: cover;
+  background-position: center;
+  color: black;
+  margin-right: 0.7em;
+}
+.Rankings {
+  height: 25vh;
+ min-width: 100vw;
+}
+.Rankings-list {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.1em;
+  overflow-x: auto;
+  font-size: 14px;
+}
+.Rankings-list span {
+  flex-shrink: 0;
+  color: rgba(220,220,220,0.8);
+}
+.Rankings-list span:nth-child(1)
+{
+  padding: 9px;
+  margin-left: 7px;
+  background-color: rgba(90,90,90,0.7);
+  border-radius: 25px;
+  font-size: 15px;
+  color: white;
+}
+.Rankings-boxes{
+  height: 85%;
+  width:100%;
+  display: flex;
+  overflow-x: auto;
+  gap: 0.4em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+.Rankings-boxes .rank_box {
+  height:100%;
+  width: 31%;
+  flex-shrink: 0;
+}
+.rank_box .rank_box2{
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+}
+.Rankings-boxes div:nth-child(1) {
+  margin-left: 0.4em;
+}
+.Rankings-boxes div:nth-child(10) {
+  margin-right: 0.3em;
+}
+#rank_box1 {
+  background-image: url("Trending 1.webp");
+  background-size: cover;
+  background-position: center;
+}
+#rank_box2 {
+  background-image: url("Trending 2.webp");
+  background-size: cover;
+  background-position: center;
+}
+#rank_box3 {
+  background-image: url("Trending 3.webp");
+  background-size: cover;
+  background-position: center;
+}
+#rank_box4 {
+  background-image: url("Trending 4.webp");
+  background-size: cover;
+  background-position: center;
+}
+#rank_box5 {
+  background-image: url("Trending 5.webp");
+  background-size: cover;
+  background-position: center;
+}
+#rank_box6 {
+  background-image: url("Trending 6.webp");
+  background-size: cover;
+  background-position: center;
+}
+#rank_box7 {
+  background-image: url("Trending 7.webp");
+  background-size: cover;
+  background-position: center;
+}
+#rank_box8 {
+  background-image: url("Trending 8.webp");
+  background-size: cover;
+  background-position: center;
+}
+#rank_box9 {
+  background-image: url("Trending 9.webp");
+  background-size: cover;
+  background-position: center;
+}
+#rank_box10 {
+  background-image: url("Trending 10.webp");
+  background-size: cover;
+  background-position: center;
+}
+.Rankings-boxes span {
+  position: absolute;
+  color: white;
+}
+
+
+.rank_box span {
+  margin-left: 10px;
+}
+.rank_box span:first-child {
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  text-align: center;
+}
+#ranks {
+  color: white;
+  margin: 1em ;
+}
+#cinema {
+  color: white;
+  margin-left: 1em;
+  margin-top:2em ;
+}
+.cinema {
+  height: 23vh;
+  min-width: 100vw;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 0.4em;
+  margin-top: 0.4em;
+  
+}
+.Cinema-box {
+  height: 100%;
+  width: 31%;
+  flex-shrink: 0;
+}
+.cinema .Cinema-box:first-child {
+  margin-left: 0.5em;
+}
+.cinema .Cinema-box:last-child {
+  margin-right: 0.5em;
+}
+.Cinema-box2 {
+  height: 90%;
+  width:100%;
+  background-color: #333;
+}
+.text-cinema {
+  height:10%;
+  color: white;
+  background-color: #333;
+  font-size:14px;
+}
+#Cinema-box1 {
+  background-image: url("Cinema 1.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Cinema-box2 {
+  background-image: url("Cinema 2.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Cinema-box3 {
+  background-image: url("Cinema 3.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Cinema-box4 {
+  background-image: url("Cinema 4.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Cinema-box5 {
+  background-image: url("Cinema 5.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Cinema-box6 {
+  background-image: url("Cinema 6.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Cinema-box7 {
+  background-image: url("Cinema 7.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Cinema-box8 {
+  background-image: url("Cinema 8.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Cinema-box9 {
+  background-image: url("Cinema 9.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Cinema-box10 {
+  background-image: url("Cinema 10.webp");
+  background-size: cover;
+  background-position: center;
+}
+.hot {
+  color: white;
+  margin-top: 2em;
+  margin-left: 1em;
+}
+#Hot-box1 {
+  background-image: url("Hot 1.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Hot-box2 {
+  background-image: url("Hot 2.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Hot-box3 {
+  background-image: url("Hot 3.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Hot-box4 {
+  background-image: url("Hot 4.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Hot-box5 {
+  background-image: url("Hot 5.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Hot-box6 {
+  background-image: url("Hot 6.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Hot-box7 {
+  background-image: url("Hot 7.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Hot-box8 {
+  background-image: url("Hot 8.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Hot-box9 {
+  background-image: url("Hot 9.webp");
+  background-size: cover;
+  background-position: center;
+}
+#Hot-box10 {
+  background-image: url("Hot 10.webp");
+  background-size: cover;
+  background-position: center;
+}
+footer {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+footer p {
+  color: rgba(100,100,100,0.9);
+  text-align: center;
+  font-size: 12px;
+}
